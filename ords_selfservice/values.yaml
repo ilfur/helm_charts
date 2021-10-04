@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: ords-selfservice
+namespace: ords
 
 replicaCount: 1
 
