@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.name }}-config
+data:
+  conn_string.txt: |
+    CONN_STRING={{ .Values.data.sysdbaUser }}/{{ .Values.data.sysdbaPwd }}@{{ .Values.data.dbHost }}:{{ .Values.data.dbPort }}/{{ .Values.data.dbService }}  

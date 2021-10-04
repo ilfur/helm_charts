@@ -1,0 +1,37 @@
+# Default values for ords_selfservice.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: ords-selfservice
+
+replicaCount: 1
+
+image:
+  repository: container-registry.oracle.com/database/ords:latest
+
+data: 
+  sysdbaUser: sys
+  sysdbaPwd: BrunhildeZ32##
+  dbHost: 152.70.55.224
+  dbPort: 1521
+  dbService: pdb21c.sub02161014000.publicvcn.oraclevcn.com
+
+service:
+  type: LoadBalancer
+  port: 8080
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
