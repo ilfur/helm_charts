@@ -6,7 +6,7 @@ entries:
     created: "2021-10-04T14:27:35.7056768+02:00"
     description: A Helm chart to create a new APEX/ORDS deployment
     digest: af4e76311bc152d2f06e658e8c79d2da5b9fdd0f5b6d41b072245594cb4db455
-    icon: https://github.com/ilfur/helm_charts/blob/master/ords_selfservice/ords_logo.png
+    icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
     name: ords_selfservice
     type: application
     urls:
