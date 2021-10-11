@@ -3,9 +3,9 @@ entries:
   ords_atp_helm:
   - apiVersion: v2
     appVersion: 20.4.3
-    created: "2021-10-11T17:09:55.9770187+02:00"
+    created: "2021-10-11T17:21:43.5284501+02:00"
     description: ORDS conecting an ATP Database
-    digest: 9df83250037062a450c0d35c3e353bfeaf4e2492c7855569fbf25a85ea880d3d
+    digest: 73787a76c3d4a4dd5490e8bbb185c9be40e0228bdb1a47ddb94f632df7135eb5
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
     name: ords_atp_helm
     type: application
@@ -15,7 +15,7 @@ entries:
   ords_selfservice:
   - apiVersion: v2
     appVersion: 21.2.4
-    created: "2021-10-11T17:09:55.9818673+02:00"
+    created: "2021-10-11T17:21:43.5323564+02:00"
     description: A Helm chart to create a new APEX/ORDS deployment
     digest: bf125a1f3956cba229a83fb6afe01e0d4daa24b8ec3ff4b259e1b00d6702c706
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
@@ -24,4 +24,4 @@ entries:
     urls:
     - https://ilfur.github.io/helm_charts/ords_selfservice-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-11T17:09:55.9750324+02:00"
+generated: "2021-10-11T17:21:43.5265017+02:00"
