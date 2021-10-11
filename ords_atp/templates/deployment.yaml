@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+    spec:
+      containers:
+        - name: {{ .Values.name }}
+          image: ams.ocir.io/oraseemeadesandbox/publicrepo/oracle/restdataservices:20.4.3
+          env:
+          - name: ORACLE_USER
+            value: {{ .Values.ords.user }}
+          - name: ORACLE_SERVICE
+            value: {{ .Values.ords.service }}
+          - name: CONTEXT_ROOT
+            value: "ords"
+          - name: ORACLE_PWD
+            value: "dummy"
+          - name: ORDS_PWD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.name}}-password
+                key: password
+          ports:
+            - containerPort: 8888
+      imagePullSecrets:
+         - name: oke-registry-secret

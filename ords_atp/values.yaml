@@ -1,0 +1,20 @@
+# Default values for ords_selfservice.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: ords-selfservice
+namespace: ords
+
+ords: 
+  user: ORDS_CUSTOM
+  password: QnJ1bmhpbGRlWjMyIyM=
+  service: repodb_medium
+
+resources: 
+  limits:
+    cpu: 250m
+    memory: 384Mi
+  requests:
+    cpu: 250m
+    memory: 384Mi
+
