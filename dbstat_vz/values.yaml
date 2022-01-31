@@ -1,0 +1,19 @@
+# Default values for ords_selfservice.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: dbstat-verrazzano
+namespace: oraclecmp-operator
+
+dbstat: 
+  secret_name: mypdb_secret
+  configmap_name: mypdb_config
+
+resources: 
+  limits:
+    cpu: 250m
+    memory: 384Mi
+  requests:
+    cpu: 250m
+    memory: 384Mi
+

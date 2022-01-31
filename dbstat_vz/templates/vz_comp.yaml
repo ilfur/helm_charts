@@ -1,0 +1,44 @@
+# Copyright (c) 2020, 2021, Oracle and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: {{ .Values.name }}-component
+  namespace: {{ .Values.namespace }}
+spec:
+  workload:
+    apiVersion: oam.verrazzano.io/v1alpha1
+    kind: VerrazzanoHelidonWorkload
+    metadata:
+      name: {{ .Values.name }}-workload
+      labels:
+        app: {{ .Values.name }}
+        version: v1
+    spec:
+      deploymentTemplate:
+        metadata:
+          name: {{ .Values.name }}-deployment
+        podSpec:
+          containers:
+            - name: {{ .Values.name }}-container
+              image: docker.io/ilfur/helidon-dbstat
+              imagePullPolicy: Always
+              env:
+              - name: DBUSR
+                valueFrom:
+                  secretKeyRef:
+                    name: {{ .Values.dbstat.secret_name }}
+                    key: pdb_admin
+              - name: DBPWD
+                valueFrom:
+                  secretKeyRef:
+                    name: {{ .Values.dbstat.secret_name }}
+                    key: pdb_pwd
+              - name: DBURL
+                valueFrom:
+                  configMapKeyRef:
+                    name: {{ .Values.dbstat.configmap_name }}
+                    key: pdb_conn
+              ports:
+                - containerPort: 8080
+                  name: http
