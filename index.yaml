@@ -3,9 +3,9 @@ entries:
   dbstat_helidon_verrazzano:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-02-01T14:20:36.9365844+01:00"
+    created: "2022-02-01T15:00:45.1947629+01:00"
     description: Quick Database App using Verrazzano
-    digest: a9c4ce762ef99fba5585b9b4996e08fdb03e9443be1d26778b0173843e62b6b0
+    digest: ea06e7edb43741d91de1d9d829a423fb31802ee6fb5b72f899017c9f1bc9e096
     icon: https://ilfur.github.io/helm_charts/dbstat_vz/oracledb_icon.png
     name: dbstat_helidon_verrazzano
     type: application
@@ -15,7 +15,7 @@ entries:
   ords_atp_helm:
   - apiVersion: v2
     appVersion: 20.4.3
-    created: "2022-02-01T14:20:36.937569+01:00"
+    created: "2022-02-01T15:00:45.1977428+01:00"
     description: ORDS conecting an ATP Database
     digest: 73787a76c3d4a4dd5490e8bbb185c9be40e0228bdb1a47ddb94f632df7135eb5
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
@@ -27,7 +27,7 @@ entries:
   ords_selfservice:
   - apiVersion: v2
     appVersion: 21.2.4
-    created: "2022-02-01T14:20:36.9395152+01:00"
+    created: "2022-02-01T15:00:45.1996526+01:00"
     description: A Helm chart to create a new APEX/ORDS deployment
     digest: bf125a1f3956cba229a83fb6afe01e0d4daa24b8ec3ff4b259e1b00d6702c706
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
@@ -36,4 +36,4 @@ entries:
     urls:
     - https://ilfur.github.io/helm_charts/ords_selfservice-0.1.0.tgz
     version: 0.1.0
-generated: "2022-02-01T14:20:36.9336871+01:00"
+generated: "2022-02-01T15:00:45.1928142+01:00"
