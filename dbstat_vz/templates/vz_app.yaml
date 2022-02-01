@@ -3,14 +3,14 @@
 apiVersion: core.oam.dev/v1alpha2
 kind: ApplicationConfiguration
 metadata:
-  name: {{ .Release.name }}-appconf
-  namespace: {{ .Release.namespace }}
+  name: {{ .Release.Name }}-appconf
+  namespace: {{ .Release.Namespace }}
   annotations:
     version: v1.0.0
     description: "DBstat Helidon application for Verrazzano"
 spec:
   components:
-    - componentName: {{ .Release.name }}-component
+    - componentName: {{ .Release.Name }}-component
       traits:
         - trait:
             apiVersion: oam.verrazzano.io/v1alpha1
@@ -21,7 +21,7 @@ spec:
             apiVersion: oam.verrazzano.io/v1alpha1
             kind: IngressTrait
             metadata:
-              name: {{ .Release.name }}-ingress
+              name: {{ .Release.Name }}-ingress
             spec:
               rules:
                 - paths:

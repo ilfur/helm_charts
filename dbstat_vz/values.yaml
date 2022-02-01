@@ -2,9 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-name: dbstat-verrazzano
-namespace: oraclecmp-operator
-
 cmp:
   service: mypdb
   workload: Small
