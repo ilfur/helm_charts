@@ -1,0 +1,13 @@
+apiVersion: "sample.database.oracle/v1"
+kind: OracleCMP
+metadata:
+  name: {{ .Release.Name }}-CMP-DB
+  namespace: {{ .Release.Namespace }}
+spec:
+  comment: {{ .Values.cmp.comment }}
+  department: {{ .Values.cmp.department }}
+  pdbaas_service: {{ .Values.cmp.service }}
+  pdbaas_tbs: pdb_tbs1
+  pdbaas_template: PDB_Standard
+  pdbaas_workload: {{ .Values.cmp.workload }}
+  pdbaas_zone: RZLP

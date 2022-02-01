@@ -5,9 +5,11 @@
 name: dbstat-verrazzano
 namespace: oraclecmp-operator
 
-dbstat: 
-  secret_name: mypdb_secret
-  configmap_name: mypdb_config
+cmp:
+  service: mypdb
+  workload: Small
+  department: Development
+  comment: fresh development DB
 
 resources: 
   limits:

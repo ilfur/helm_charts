@@ -3,41 +3,41 @@
 apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
-  name: {{ .Values.name }}-component
-  namespace: {{ .Values.namespace }}
+  name: {{ .Release.Name }}-component
+  namespace: {{ .Release.Namespace }}
 spec:
   workload:
     apiVersion: oam.verrazzano.io/v1alpha1
     kind: VerrazzanoHelidonWorkload
     metadata:
-      name: {{ .Values.name }}-workload
+      name: {{ .Release.Name }}-workload
       labels:
-        app: {{ .Values.name }}
+        app: {{ .Release.Name }}
         version: v1
     spec:
       deploymentTemplate:
         metadata:
-          name: {{ .Values.name }}-deployment
+          name: {{ .Release.Name }}-deployment
         podSpec:
           containers:
-            - name: {{ .Values.name }}-container
+            - name: {{ .Release.Name }}-container
               image: docker.io/ilfur/helidon-dbstat
               imagePullPolicy: Always
               env:
               - name: DBUSR
                 valueFrom:
                   secretKeyRef:
-                    name: {{ .Values.dbstat.secret_name }}
+                    name: {{ .Values.cmp.service }}-secret
                     key: pdb_admin
               - name: DBPWD
                 valueFrom:
                   secretKeyRef:
-                    name: {{ .Values.dbstat.secret_name }}
+                    name: {{ .Values.cmp.service }}-secret
                     key: pdb_pwd
               - name: DBURL
                 valueFrom:
                   configMapKeyRef:
-                    name: {{ .Values.dbstat.configmap_name }}
+                    name: {{ .Values.cmp.service }}-config
                     key: pdb_conn
               ports:
                 - containerPort: 8080
