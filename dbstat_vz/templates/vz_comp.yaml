@@ -25,10 +25,7 @@ spec:
               imagePullPolicy: Always
               env:
               - name: DBUSR
-                valueFrom:
-                  secretKeyRef:
-                    name: {{ .Values.cmp.service }}-secret
-                    key: pdb_admin
+                value: system
               - name: DBPWD
                 valueFrom:
                   secretKeyRef:
