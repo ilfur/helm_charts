@@ -1,7 +1,7 @@
 apiVersion: "sample.database.oracle/v1"
 kind: OracleCMP
 metadata:
-  name: {{ .Release.Name }}-CMP-DB
+  name: {{ .Release.Name }}-cmp-db
   namespace: {{ .Release.Namespace }}
 spec:
   comment: {{ .Values.cmp.comment }}
