@@ -1,0 +1,22 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: {{ .Release.Name }}-component
+  namespace: {{ .Release.Namespace }}
+spec:
+  workload:
+    apiVersion: core.oam.dev/v1alpha2
+    kind: ContainerizedWorkload
+    metadata:
+      name: {{ .Release.Name }}-workload
+      labels:
+        app: {{ .Release.Name }}
+        version: v1
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-container
+          image: ilfur/pythonflask:1.0
+          ports:
+            - containerPort: 5000
+              name: pythonflask
+          imagePullPolicy: Always
