@@ -1,6 +1,6 @@
 <!--- app-name: Apache Kafka -->
 
-# Simple Python REST service
+## Simple Python REST service
 
 Sample container image written in Python, using "flask" Web Server.
 After deployment, check for the created Istio Gateway to see the virtual host name.
