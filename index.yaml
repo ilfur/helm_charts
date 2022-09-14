@@ -3,9 +3,9 @@ entries:
   dbstat_helidon_verrazzano:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-09-14T09:03:21.71875433Z"
+    created: "2022-09-14T09:34:56.753251122Z"
     description: Quick Database App using Verrazzano
-    digest: fda49eb940b1f8bb4f20fb137431137de1302b1e6fee26c92f08deaea16340ed
+    digest: 7d9ceeb4d836a5f3b015768973bcce88fd4199283c78db73992995dfd913fc3b
     icon: https://ilfur.github.io/helm_charts/dbstat_vz/oracledb_icon.png
     name: dbstat_helidon_verrazzano
     type: application
@@ -15,9 +15,9 @@ entries:
   ords_atp_helm:
   - apiVersion: v2
     appVersion: 20.4.3
-    created: "2022-09-14T09:03:21.71959543Z"
+    created: "2022-09-14T09:34:56.754170237Z"
     description: ORDS conecting an ATP Database
-    digest: 8495930ccd046f7fe6874d1f576b13166a461f3840c8e27e1a180d9a8dbcab34
+    digest: 4ffdfd412025d1cb9a18ef17352029c4549ba1365b9fe0a61a27de27fbe3cd60
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
     name: ords_atp_helm
     type: application
@@ -27,9 +27,9 @@ entries:
   ords_selfservice:
   - apiVersion: v2
     appVersion: 21.2.4
-    created: "2022-09-14T09:03:21.720311501Z"
+    created: "2022-09-14T09:34:56.754878164Z"
     description: A Helm chart to create a new APEX/ORDS deployment
-    digest: 302917b7637e799df4d1e8c4ed1901ffbe3159f602a255a816c6c4337e707fb3
+    digest: f81858d321d57021aea6eefa34fd6a841ce5d8970ceaceca5887943a85444c7c
     icon: https://ilfur.github.io/helm_charts/ords_selfservice/ords_logo.png
     name: ords_selfservice
     type: application
@@ -39,13 +39,13 @@ entries:
   python_rest:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-09-14T09:03:21.721005928Z"
+    created: "2022-09-14T09:34:56.755870714Z"
     description: Quick Python REST service using Verrazzano
-    digest: 055dcdcc000ca04073653ab0e8a8de725af3883fb68df788316565b1011b657a
+    digest: 8ad934b42d63eb64dd2858c0cdce417eb1624ad6a6d6812e236b5dcfad3e01aa
     icon: https://ilfur.github.io/helm_charts/python_rest/python_logo.png
     name: python_rest
     type: application
     urls:
     - python_rest-0.1.0.tgz
     version: 0.1.0
-generated: "2022-09-14T09:03:21.713979678Z"
+generated: "2022-09-14T09:34:56.75101418Z"
